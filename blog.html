@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.127.0/lucide.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="p-4 shadow-md transition-colors bg-white text-gray-900">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="./assets/logo.png" class="w-6 h-6" alt="">
+                <span class="text-xl font-bold">DevBoard</span>
+            </div>
+
+            <!-- Checked Task -->
+            <a href="./index.html" class="flex items-center gap-4 ">
+                <button id="google-llc-card"
+                    class="bg-indigo-700 shadow-sm px-4 py-2 rounded font-semibold text-white disabled:bg-gray-500">Back
+                    to home</button>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4">
+        <h3 class="text-3xl mx-auto text-center mt-4 font-bold">Blogs</h3>
+
+        <!-- Questions and Answers Section -->
+        <div class="mt-8 space-y-6">
+            <!-- Question 1 -->
+            <div>
+                <h4 class="text-xl font-semibold text-indigo-700">Question 1: What are the different ways to select an element in the DOM?</h4>
+                <p class="mt-2 text-gray-800">
+                    <strong>Answer:</strong> There are several ways to select elements in the DOM:
+                    <ul class="list-disc ml-6 mt-1 text-gray-700">
+                        <li><code>getElementById()</code> - Selects a single element by its ID.</li>
+                        <li><code>getElementsByClassName()</code> - Selects all elements with a specific class.</li>
+                        <li><code>getElementsByTagName()</code> - Selects all elements of a given tag name.</li>
+                        <li><code>querySelector()</code> - Selects the first element that matches a CSS selector.</li>
+                        <li><code>querySelectorAll()</code> - Selects all elements that match a CSS selector.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <!-- Question 2 -->
+            <div>
+                <h4 class="text-xl font-semibold text-indigo-700">Question 2: What is the difference between innerHTML, innerText, and textContent?</h4>
+                <p class="mt-2 text-gray-800">
+                    <strong>Answer:</strong>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li><code>innerHTML</code> - Gets or sets the HTML content of an element, including tags.</li>
+                        <li><code>innerText</code> - Gets or sets the visible text of an element, excluding hidden elements.</li>
+                        <li><code>textContent</code> - Gets or sets all the text within an element, including hidden elements, but ignores HTML tags.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <!-- Question 3 -->
+            <div>
+                <h4 class="text-xl font-semibold text-indigo-700">Question 3: What is event delegation in the DOM?</h4>
+                <p class="mt-2 text-gray-800">
+                    <strong>Answer:</strong> Event delegation is a technique where a single event listener is added to a parent element to manage events for its children. It leverages event bubbling to efficiently handle events for multiple child elements.
+                </p>
+            </div>
+
+            <!-- Question 4 -->
+            <div>
+                <h4 class="text-xl font-semibold text-indigo-700">Question 4: What is event bubbling in the DOM?</h4>
+                <p class="mt-2 text-gray-800">
+                    <strong>Answer:</strong> Event bubbling is a mechanism in the DOM where an event triggered on a child element first runs its handler and then propagates up to its ancestors, executing their respective event handlers if they exist.
+                </p>
+            </div>
+
+            <!-- Question 5 -->
+            <div>
+                <h4 class="text-xl font-semibold text-indigo-700">Question 5: How do you create, add, and remove elements using JavaScript?</h4>
+                <p class="mt-2 text-gray-800">
+                    <strong>Answer:</strong>
+                    <ul class="list-disc ml-6 text-gray-700">
+                        <li><strong>Create:</strong> Use <code>document.createElement()</code> to create a new element.</li>
+                        <li><strong>Add:</strong> Use <code>appendChild()</code> or <code>append()</code> to add the element to the DOM.</li>
+                        <li><strong>Remove:</strong> Use <code>removeChild()</code> or <code>remove()</code> to delete an element from the DOM.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
